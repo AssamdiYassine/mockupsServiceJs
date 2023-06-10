@@ -42,7 +42,7 @@ app.use("/api", handler);
 
 // End V1
 app.get("/", function (req, res) {
-  res.send();
+  res.send("this is servies mockups helper");
 });
 
 app.get("*", function (req, res) {
