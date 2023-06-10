@@ -18,6 +18,14 @@ function extractData(filePath) {
 let i = 0;
 module.exports = {
   UploadDesign: async (req, res) => {
+    const folderName = 'upload';
+    fs.mkdir(folderName, (err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(`Folder "${folderName}" created successfully.`);
+      }
+    });
     const filePath = buildPath();
     const AllData = extractData(filePath);
 
